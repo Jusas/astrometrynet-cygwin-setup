@@ -24,8 +24,8 @@ curl -o %SETUP_EXE% %SETUP_URL%
 REM -- These are the packages we will install (in addition to the default packages)
 SET PACKAGES=clang,wget,cmake,gcc-core,gsl,libX11-xcb-devel,libXdamage-devel,libXdamage1,libcairo-devel,libgsl-devel
 SET PACKAGES=%PACKAGES%,libgsl0,libgsl19,libjpeg-devel,libjpeg8,libnetpbm-devel,libnetpbm10,libpcre-devel
-SET PACKAGES=%PACKAGES%,libpixman1-devel,libxcb-glx-devel,libzip-devel,libzip2,make,netpbm,pkg-config,python2-devel
-SET PACKAGES=%PACKAGES%,python2-numpy,swig,zlib-devel
+SET PACKAGES=%PACKAGES%,libpixman1-devel,libxcb-glx-devel,libzip-devel,libzip2,make,netpbm,pkg-config,python38-devel
+SET PACKAGES=%PACKAGES%,python38-numpy,swig,zlib-devel
 
 REM -- Do it!
 ECHO *** INSTALLING PACKAGES
