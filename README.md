@@ -41,7 +41,7 @@ The script is run with the following arguments:
    Parameters:
    <0|1> means no/yes, ie. '-a 1' means 'install astrometry.net'
   
-     -a   install astrometry.net v0.76 and its dependencies.
+     -a   install astrometry.net v0.85 and its dependencies.
             Optional. If omitted, it will not be installed.
      -i   download astrometry.net index files, a comma separated
             string with index scale numbers, from 0 to 19,

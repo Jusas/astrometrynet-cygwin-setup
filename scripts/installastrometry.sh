@@ -21,7 +21,7 @@ usage() {
   echo "Parameters:"
   echo "<0|1> means no/yes, ie. '-a 1' means 'install astrometry.net'"
   echo
-  echo "  -a   install astrometry.net v0.76 and its dependencies."
+  echo "  -a   install astrometry.net v0.85 and its dependencies."
   echo "         Optional. If omitted, it will not be installed."
   echo "  -i   download astrometry.net index files, a comma separated"
   echo "         string with index scale numbers, from 0 to 19,"
@@ -94,7 +94,7 @@ function install_astrometry() {
 
   # PIP and astropy
   curl https://bootstrap.pypa.io/get-pip.py | python
-  pip install --no-deps astropy
+  pip install astropy
 
   # CFITSIO
   curl -L -o cfitsio.tgz http://heasarc.gsfc.nasa.gov/FTP/software/fitsio/c/cfitsio3450.tar.gz
@@ -107,9 +107,9 @@ function install_astrometry() {
   ( cd wcslib-5.19.1 && ./configure LIBS="-pthread -lm" --without-pgplot --disable-fortran --prefix=/usr && make && make check && make install )
 
   # Astrometry.net
-  curl -L -o astrometry.tgz http://astrometry.net/downloads/astrometry.net-0.76.tar.gz
+  curl -L -o astrometry.tgz http://astrometry.net/downloads/astrometry.net-0.85.tar.gz
   tar zxvf astrometry.tgz
-  ( cd astrometry.net-0.76 && make && make py && make extra && make install INSTALL_DIR=/usr )
+  ( cd astrometry.net-0.85 && make && make py && make extra && make install INSTALL_DIR=/usr )
 
 }
 
